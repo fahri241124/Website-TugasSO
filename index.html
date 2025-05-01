@@ -79,7 +79,42 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* Tugas style */
+    .task-box {
+      background: #e6f3ff;
+      padding: 15px 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #0056b3;
+      transition: background 0.3s;
+    }
+
+    .task-box:hover {
+      background: #d1eaff;
+    }
+
+    .task-answer {
+      display: none;
+      padding: 15px 20px;
+      background: #f9f9f9;
+      border-left: 4px solid #007bff;
+      margin-bottom: 15px;
+      border-radius: 0 0 10px 10px;
+    }
   </style>
+  <script>
+    function toggleAnswer(id) {
+      var ans = document.getElementById(id);
+      if (ans.style.display === \"block\") {
+        ans.style.display = \"none\";
+      } else {
+        ans.style.display = \"block\";
+      }
+    }
+  </script>
 </head>
 <body>
 
@@ -108,7 +143,7 @@
         </tr>
         <tr>
           <td>2025 - Sekarang</td>
-          <td>Universitas perjuangan</td>
+          <td>Universitas Perjuangan</td>
           <td>Teknik Informatika</td>
         </tr>
         <tr>
@@ -140,7 +175,7 @@
     <section>
       <h2>Kontak</h2>
       <p>Email: <a href="mailto:arsanafahri@gmail.com">arsanafahri@gmail.com</a></p>
-      <p>Instagram: <a href="https://Instagram.com/in/fahri" target="_blank">https://www.instagram.com/fhriarsana_?igsh=MThscDdidmNxMml1OQ%3D%3D&utm_source=qr</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/fhriarsana_?igsh=MThscDdidmNxMml1OQ%3D%3D&utm_source=qr" target="_blank">@fhriarsana_</a></p>
     </section>
 
     <footer>
