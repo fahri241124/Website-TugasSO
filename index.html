@@ -1,157 +1,154 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fahri Ahmad Subhakti</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahri Ahmad Subhakti - Web Pribadi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-      color: #333;
+    :root {
+      --primary: #1e3c72;
+      --secondary: #2a5298;
+      --light: #f0f4f8;
+      --white: #ffffff;
+      --gray: #888;
+      --box: #e6f3ff;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      padding: 60px 20px;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .profile-img {
-      width: 150px;
-      border-radius: 50%;
+    header h1 {
       margin-bottom: 10px;
+      font-size: 2.8em;
     }
 
-    h1 {
-      margin: 10px 0 5px;
+    header p {
+      margin: 0;
+      font-size: 1.2em;
     }
 
-    .tagline {
-      font-style: italic;
-      color: #666;
+    nav {
+      background-color: var(--white);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
-    section {
-      margin-top: 30px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-
-    th {
-      background-color: #007bff;
-      color: white;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: #888;
-      font-size: 0.9em;
-    }
-
-    a {
-      color: #007bff;
+    nav a {
+      margin: 0 15px;
       text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
     }
 
-    a:hover {
+    nav a:hover {
       text-decoration: underline;
     }
 
-    /* Tugas style */
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: var(--white);
+      margin-bottom: 30px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: var(--secondary);
+      border-bottom: 2px solid var(--light);
+      padding-bottom: 10px;
+    }
+
     .task-box {
-      background: #e6f3ff;
+      background: var(--box);
       padding: 15px 20px;
-      margin: 10px 0;
-      border-radius: 10px;
+      margin-bottom: 0;
+      border-radius: 10px 10px 0 0;
       cursor: pointer;
-      font-weight: bold;
-      color: #0056b3;
+      font-weight: 600;
+      color: var(--primary);
       transition: background 0.3s;
     }
 
     .task-box:hover {
-      background: #d1eaff;
+      background: #d0eaff;
     }
 
     .task-answer {
       display: none;
       padding: 15px 20px;
-      background: #f9f9f9;
-      border-left: 4px solid #007bff;
-      margin-bottom: 15px;
+      background: #fff;
+      border-left: 4px solid var(--primary);
       border-radius: 0 0 10px 10px;
+      margin-bottom: 10px;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: var(--gray);
+      background-color: var(--white);
+      border-top: 1px solid #ddd;
     }
   </style>
   <script>
     function toggleAnswer(id) {
-      var ans = document.getElementById(id);
-      if (ans.style.display === \"block\") {
-        ans.style.display = \"none\";
+      var content = document.getElementById(id);
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
       } else {
-        ans.style.display = \"block\";
+        content.style.display = 'block';
       }
     }
   </script>
 </head>
+
 <body>
+  <header>
+    <h1>Fahri Ahmad Subhakti</h1>
+    <p>NIM: 2303010138 | Sistem Informasi - Universitas Perjuangan</p>
+  </header>
 
-  <div class="container">
-    <header>
-      <img src="https://via.placeholder.com/150" alt="No foto" class="profile-img">
-      <h1>Fahri Ahmad Subhakti</h1>
-      <p class="tagline">Web profil pribadi | Mahasiswa TI | Problem Solver</p>
-    </header>
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#tugas">Tugas</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
 
-    <section>
+  <main>
+    <section id="tentang">
       <h2>Tentang Saya</h2>
-      <p>
-        Halo, saya Fahri! Saya seorang mahasiswa perjuangan yang sedang fokus mendalami pengembangan web. 
-        Saya senang mempelajari hal-hal baru, terutama di bidang teknologi, UI/UX, dan pemrograman.
-      </p>
-    </section>
-
-    <section>
-      <h2>Riwayat Pendidikan</h2>
-      <table>
-        <tr>
-          <th>Tahun</th>
-          <th>Institusi</th>
-          <th>Jurusan</th>
-        </tr>
-        <tr>
-          <td>2025 - Sekarang</td>
-          <td>Universitas Perjuangan</td>
-          <td>Teknik Informatika</td>
-        </tr>
-        <tr>
-          <td>2020 - 2023</td>
-          <td>SMA Negeri 1 Cikatomas</td>
-          <td>IPA</td>
-        </tr>
-      </table>
+      <p>Halo! Saya Fahri Ahmad Subhakti, mahasiswa program studi Sistem Informasi. Web ini dibuat sebagai bagian dari tugas matakuliah Sistem Operasi. Web ini berisi informasi pribadi saya serta daftar tugas yang telah saya kerjakan selama perkuliahan berlangsung.</p>
     </section>
 
     <section id="tugas">
@@ -172,16 +169,16 @@
       </div>
     </section>
 
-    <section>
+    <section id="kontak">
       <h2>Kontak</h2>
-      <p>Email: <a href="mailto:arsanafahri@gmail.com">arsanafahri@gmail.com</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/fhriarsana_?igsh=MThscDdidmNxMml1OQ%3D%3D&utm_source=qr" target="_blank">@fhriarsana_</a></p>
+      <p>Email: <a href="mailto:fahri.subhakti@example.com">fahri.subhakti@example.com</a></p>
+      <p>Alamat Web: <strong>fahri.rf.gd</strong></p>
     </section>
+  </main>
 
-    <footer>
-      &copy; 2025 Fahri Ahmad Subhakti
-    </footer>
-  </div>
-
+  <footer>
+    &copy; 2025 Fahri Ahmad Subhakti - Web Pribadi Sistem Operasi
+  </footer>
 </body>
+
 </html>
