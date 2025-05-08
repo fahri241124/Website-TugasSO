@@ -85,31 +85,21 @@
     .task-box {
       background: var(--box);
       padding: 15px 20px;
-      margin-bottom: 0;
-      border-radius: 10px 10px 0 0;
+      margin-bottom: 10px;
+      border-radius: 10px;
       cursor: pointer;
       font-weight: 600;
       color: var(--primary);
-      transition: background 0.3s;
-    }
-
-    .task-box:hover {
-      background: #d0eaff;
     }
 
     .task-answer {
       display: none;
-      padding: 15px 20px;
+      padding: 10px 20px;
       background: #fff;
+      margin-top: -10px;
+      margin-bottom: 10px;
       border-left: 4px solid var(--primary);
       border-radius: 0 0 10px 10px;
-      margin-bottom: 10px;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-5px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     footer {
@@ -124,11 +114,7 @@
   <script>
     function toggleAnswer(id) {
       var content = document.getElementById(id);
-      if (content.style.display === 'block') {
-        content.style.display = 'none';
-      } else {
-        content.style.display = 'block';
-      }
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
     }
   </script>
 </head>
